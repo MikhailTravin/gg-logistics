@@ -1,0 +1,65 @@
+// @include transition(background-color 1s .5s, color 2s);
+@mixin transition($transition...) {
+  transition: $transition;
+}
+
+@mixin transition-property($property...) {
+  transition-property: $property;
+}
+
+@mixin transition-duration($duration...) {
+  transition-property: $duration;
+}
+
+@mixin transition-timing-function($timing...) {
+  transition-timing-function: $timing;
+}
+
+@mixin transition-delay($delay...) {
+  transition-delay: $delay;
+}
+
+@mixin abs-filler() {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*
+Псевдоэлемент-расширитель для кнопок:
+1. Помогает попадать по небольшим кнопкам
+2. Помогает отлавливать событие нажатия на кнопку при наличии в ней различных элементов
+*/
+@mixin btn-filler-inset($gap: 0) {
+  content: '';
+  position: absolute;
+  inset: $gap $gap $gap $gap;
+}
+
+@mixin text-link() {
+  a {
+    color: var(--theme-color-accent);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
+}
+
+@mixin hideScrollbar() {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  & {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}

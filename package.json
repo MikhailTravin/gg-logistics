@@ -1,0 +1,33 @@
+{
+  "name": "nunjucks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp",
+    "dev": "npm run gulp sync",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-beautify": "^3.0.0",
+    "gulp-nunjucks": "^5.1.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "^5.1.0",
+    "gulp-svg-symbols": "^3.2.3",
+    "postcss": "^8.4.28",
+    "sass": "^1.66.1",
+    "stylelint": "^15.10.3",
+    "stylelint-config-standard-scss": "^11.0.0"
+  },
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0",
+    "stylelint-selector-bem-pattern": "^3.0.1"
+  }
+}

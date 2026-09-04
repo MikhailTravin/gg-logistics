@@ -1,0 +1,62 @@
+<div id="cons" aria-hidden="true" class="popup popup-forms">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div data-close class="popup__close">
+                <svg aria-hidden="true" width="8" height="8">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+            </div>
+            <div class="popup-forms__body">
+                <div class="popup-forms__top">
+                    <div class="popup-forms__title">Получить
+                        консультацию</div>
+                    <p>
+                        Оставьте номер телефона и наш менеджер вам перезвонит и ответит на все вопросы
+                    </p>
+                </div>
+                <form data-popup-message="#thanks" method="POST" action="send-cons.php" data-ajax class="form">
+                    <div class="form__inputs">
+                        <div class="form__input">
+                            <input data-required autocomplete="off" type="text" name="name" placeholder="Ваше имя"
+                                class="input">
+                        </div>
+                        <div class="form__input">
+                            <input data-required autocomplete="off" type="text" name="phone"
+                                placeholder="Номер телефона" class="input telephone">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-big">
+                        <span>Отправить</span>
+                        <svg aria-hidden="true" width="6" height="11">
+                            <use xlink:href="img/sprite.svg#arrow1"></use>
+                        </svg>
+                    </button>
+                    <div class="form__text">
+                        Нажимая на кнопку “Отправить” вы даете согласие на обработку <a href="./">персональных
+                            данных</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="thanks" aria-hidden="true" class="popup popup-forms">
+    <div class="popup__wrapper">
+        <div class="popup__content">
+            <div data-close class="popup__close">
+                <svg aria-hidden="true" width="16" height="16">
+                    <use xlink:href="img/sprite.svg#close"></use>
+                </svg>
+            </div>
+            <div class="popup-forms__body">
+                <div class="popup-forms__top">
+                    <div class="popup-forms__title">Спасибо за заявку!</div>
+                    <p>
+                        Свяжимся с вами в ближайшее время.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,124 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    transition: visibility 0.8s ease 0s;
+    visibility: hidden;
+    pointer-events: none;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    @media (max-width: 390px) {
+        padding: 20px 10px;
+    }
+}
+.popup_show {
+    z-index: 150;
+    visibility: visible;
+    overflow: auto;
+    pointer-events: auto;
+}
+.popup_show .popup__content {
+    visibility: visible;
+    transform: scale(1);
+}
+.popup__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup__content {
+    position: relative;
+    visibility: hidden;
+    transform: scale(0);
+    transition: transform 0.3s ease 0s;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--ffffff);
+    box-shadow: 0 5px 60px 0 rgba(14, 29, 14, 0.12);
+    overflow: hidden;
+    max-width: 410px;
+    padding: 38px 50px 42px 50px;
+    @media (max-width: 768px) {
+        padding: 35px 20px 30px 20px;
+    }
+    .lock & {
+        visibility: visible;
+    }
+}
+
+.popup__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f3ef;
+    border-radius: 50%;
+    svg {
+        fill: var(--0e1d0e);
+    }
+}
+
+.popup-forms {
+    // .popup-forms__body
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media (max-width: 768px) {
+            gap: 15px;
+        }
+    }
+
+    // .popup-forms__top
+
+    &__top {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        @media (max-width: 768px) {
+            gap: 8px;
+        }
+        p {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 143%;
+            text-align: center;
+            color: rgba(14, 29, 14, 0.8);
+            @media (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // .popup-forms__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 111%;
+        text-align: center;
+        @media (max-width: 768px) {
+            font-size: 28px;
+        }
+    }
+}
