@@ -45,14 +45,14 @@
     transform: scale(0);
     transition: transform 0.3s ease 0s;
     width: 100%;
-    border-radius: 10px;
-    background: var(--ffffff);
-    box-shadow: 0 5px 60px 0 rgba(14, 29, 14, 0.12);
+    border-radius: 20px;
+    background: linear-gradient(242.95deg, #2aaade -83.79%, #1d406a 77%);
+    box-shadow: 0 15px 30px 0 rgba(16, 51, 81, 0.08);
     overflow: hidden;
-    max-width: 410px;
-    padding: 38px 50px 42px 50px;
+    max-width: 630px;
+    padding: 48px 70px 45px 70px;
     @media (max-width: 768px) {
-        padding: 35px 20px 30px 20px;
+        padding: 48px 20px 30px 20px;
     }
     .lock & {
         visibility: visible;
@@ -61,18 +61,22 @@
 
 .popup__close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     cursor: pointer;
-    width: 24px;
-    height: 24px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f3ef;
+    background-color: var(--2d393e);
     border-radius: 50%;
     svg {
-        fill: var(--0e1d0e);
+        fill: var(--ffffff);
+    }
+    @media (max-width: 768px) {
+        top: 10px;
+        right: 10px;
     }
 }
 
@@ -82,9 +86,9 @@
     &__body {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 33px;
         @media (max-width: 768px) {
-            gap: 15px;
+            gap: 20px;
         }
     }
 
@@ -103,7 +107,7 @@
             font-size: 14px;
             line-height: 143%;
             text-align: center;
-            color: rgba(14, 29, 14, 0.8);
+            color: var(--ffffff);
             @media (max-width: 768px) {
                 font-size: 12px;
             }
@@ -113,12 +117,17 @@
     // .popup-forms__title
 
     &__title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 111%;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 121%;
         text-align: center;
+        color: var(--ffffff);
+        text-align: center;
+        span {
+            font-weight: 700;
+        }
         @media (max-width: 768px) {
-            font-size: 28px;
+            font-size: 24px;
         }
     }
 }
