@@ -1063,6 +1063,41 @@ if (document.querySelector('.block-teams__slider')) {
   });
 }
 
+if (document.querySelector('.images-product')) {
+  const thumbsSwiper = new Swiper('.images-product__thumb', {
+    observer: true,
+    observeParents: true,
+    slidesPerView: 2.5,
+    spaceBetween: 10,
+    speed: 400,
+    preloadImages: true,
+    breakpoints: {
+      550: {
+        slidesPerView: 4, spaceBetween: 10,
+      },
+      768: {
+        slidesPerView: 5, spaceBetween: 15,
+      },
+    },
+  });
+
+  const mainThumbsSwiper = new Swiper('.images-product__slider', {
+    thumbs: {
+      swiper: thumbsSwiper
+    },
+    observer: true,
+    observeParents: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    speed: 400,
+    preloadImages: true,
+    navigation: {
+      prevEl: '.images-product__arrow-prev',
+      nextEl: '.images-product__arrow-next',
+    },
+  });
+}
+
 //========================================================================================================================================================
 
 //Табы

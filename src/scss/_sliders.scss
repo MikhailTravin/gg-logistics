@@ -20,6 +20,9 @@
     }
 }
 .nav-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 15;
     position: absolute;
     top: 50%;
